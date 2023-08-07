@@ -1,132 +1,140 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-<modelVersion>4.0.0</modelVersion>
+	<modelVersion>4.0.0</modelVersion>
 
-<groupId>com.asha</groupId>
+	<groupId>com.asha</groupId>
 
-<artifactId>fruits</artifactId>
+	<artifactId>fruits</artifactId>
 
-<version>1.0.0</version>
+	<version>1.0.0</version>
 
-<packaging>jar</packaging>
+	<packaging>jar</packaging>
 
-<name>spring-boot-rest-jpa</name>
+	<name>spring-boot-rest-jpa</name>
 
-<description>Rest API for a Comments Application</description>
+	<description>Rest API for a Comments Application</description>
 
 
-<parent>
+	<parent>
 
-<groupId>org.springframework.boot</groupId>
+		<groupId>org.springframework.boot</groupId>
 
-<artifactId>spring-boot-starter-parent</artifactId>
+		<artifactId>spring-boot-starter-parent</artifactId>
 
-<version>2.3.0.RELEASE</version>
+		<version>2.3.0.RELEASE</version>
 
-<relativePath/>
+		<relativePath />
 
-<!-- lookup parent from repository -->
+		<!-- lookup parent from repository -->
 
 
-</parent>
+	</parent>
 
 
-<properties>
+	<properties>
 
-<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-<java.version>1.8</java.version>
+		<java.version>1.8</java.version>
 
-</properties>
+	</properties>
 
 
-<dependencies>
+	<dependencies>
 
 
-<dependency>
+		<dependency>
 
-<groupId>org.springframework.boot</groupId>
+			<groupId>org.springframework.boot</groupId>
 
-<artifactId>spring-boot-starter-data-jpa</artifactId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
 
-</dependency>
+		</dependency>
 
 
-<dependency>
+		<dependency>
 
-<groupId>org.springframework.boot</groupId>
+			<groupId>org.springframework.boot</groupId>
 
-<artifactId>spring-boot-starter-web</artifactId>
+			<artifactId>spring-boot-starter-web</artifactId>
 
-</dependency>
+			<exclusions>
+			
+				<exclusion>
+				
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-log4j2</artifactId>
+		</dependency>
 
 
-<dependency>
 
-<groupId>org.springframework.boot</groupId>
+		<dependency>
 
-<artifactId>spring-boot-devtools</artifactId>
+			<groupId>org.springframework.boot</groupId>
 
-<scope>runtime</scope>
+			<artifactId>spring-boot-devtools</artifactId>
 
-<optional>true</optional>
+			<scope>runtime</scope>
 
-</dependency>
+			<optional>true</optional>
 
+		</dependency>
 
-<dependency>
 
-<groupId>org.springframework.boot</groupId>
+		<dependency>
 
-<artifactId>spring-boot-starter-validation</artifactId>
+			<groupId>org.springframework.boot</groupId>
 
-</dependency>
+			<artifactId>spring-boot-starter-validation</artifactId>
 
+		</dependency>
 
-<dependency>
 
-<groupId>mysql</groupId>
+		<dependency>
 
-<artifactId>mysql-connector-java</artifactId>
+			<groupId>mysql</groupId>
 
-<scope>runtime</scope>
+			<artifactId>mysql-connector-java</artifactId>
 
-</dependency>
+			<scope>runtime</scope>
 
+		</dependency>
 
-<dependency>
 
-<groupId>org.projectlombok</groupId>
+		
 
-<artifactId>lombok</artifactId>
+	</dependencies>
 
-<version>1.18.26</version>
 
-</dependency>
+	<build>
 
-</dependencies>
 
+		<plugins>
 
-<build>
 
+			<plugin>
 
-<plugins>
+				<groupId>org.springframework.boot</groupId>
 
+				<artifactId>spring-boot-maven-plugin</artifactId>
 
-<plugin>
+			</plugin>
 
-<groupId>org.springframework.boot</groupId>
+		</plugins>
 
-<artifactId>spring-boot-maven-plugin</artifactId>
-
-</plugin>
-
-</plugins>
-
-</build>
+	</build>
 
 </project>
